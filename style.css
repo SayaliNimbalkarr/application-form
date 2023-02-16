@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background: #ccc; 
+}
+
+form{
+    background: #f2f2f2;
+    padding: 6px 16px 0 16px;
+    border: 1px solid #666;
+    border-radius:6px
+}
+.education h2{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 30px;
+}
+
+.container{
+    max-width: 700px;
+    width: 100%;
+    margin: auto;
+    background: #f2f2f2;
+    padding: 25px 40px;
+    border-radius: 20px; 
+}
+
+.container .title{
+    font-size: 40px;
+    font-weight: 700;
+    margin: 10px;
+    margin-bottom: 5px;
+    position: relative;
+    text-align: center;
+    cursor: default;
+}
+.container .title:hover{
+    color: #666;
+}
+.container .title::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    height: 2px;
+    width: 105px;
+    background: #666;
+}
+
+.container h3{
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 200;
+}
+
+.required{
+    padding: 5px;
+    margin: 5px;
+    font-size: 10px;
+    font-size: 13px;
+    color: red;
+}
+
+.container form .user-details{
+    display: block;
+    margin: 20px 0 20px 0;
+    padding-left: 5px;
+}
+form .user-details .input-box{
+    width: 100%;
+    margin-bottom: 15px;
+}
+.user-details .input-box .details{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+.user-details .input-box input{
+    height: 40px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 15px;
+}
+.user-details .input-box input:hover{
+    border: 2px solid #808080;
+}
+
+select{
+    cursor: pointer;
+    width: 80px;
+    margin-bottom: 18px;
+    padding: 5px;
+    font-size: 14px;
+}
+
+.gender-title{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+    font-size: 19px;   
+}
+.gender-category{
+    color: gray;
+}
+.gender-category label{
+    padding: 0 20px 0 5px;
+    font-size: 18px;
+}
+.gender-category label, .gender-category input{
+    cursor: pointer;
+    margin-bottom: 18px;
+}
+.user-details .gender-category label:hover{
+    color: #4d4d4d;
+}
+
+.other-info{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 10px;
+    font-size: 19px;   
+}
+.other-category{
+    color: gray;
+}
+.other-category label{
+    padding: 0 20px 0 5px;
+    font-size: 18px;
+}
+.other-category label, .other-category input{
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+.user-details .other-category textarea:hover{
+    border: 2px solid #808080;
+}
+.user-details .other-category label:hover{
+    color: #4d4d4d;
+}
+textarea{
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    padding-top: 10px;
+    font-size: 15px;
+}
+
+form .user-details .file-upload{
+    width: 100%;
+    margin-bottom: 15px;
+}
+.user-details .file-upload .file{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+.user-details .file-upload input{ 
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background: #fff;
+    padding-top: 6px;
+    padding-left: 15px;
+    font-size: 15px;
+    cursor: pointer;
+}
+.user-details .file-upload input:hover{
+    border: 2px solid #808080;
+}
+
+.terms{
+    margin: 20px 0 10px 0;
+    cursor: pointer;
+    padding-top: 20px;
+}
+.check{
+    margin-left: 5px;
+    position: relative;
+    cursor: pointer;
+    font-size: 16px;
+}
+.check::before{
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 18px;
+    vertical-align: -2px;
+    border: 2px solid #808080;
+    padding: 2.5px;
+    background-color: transparent;
+    background-clip: content-box;
+    transition: all 0.2s ease;
+}
+.check::after{
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+    content: "";
+    height: 20px;
+    left: 2px;
+    position: absolute;
+    top: 6px;
+    transform: scaleX(-1) rotate(140deg);
+    transform-origin: left top;
+    width: 7px;
+    display: none;
+} 
+.checkbox{
+   border: 0;
+   clip: rect(0 0 0 0);
+   height: 1px;
+   margin: -1px;
+   overflow: hidden;
+   padding: 0;
+   position: absolute;
+    
+}
+.checkbox:hover + .check::before{
+    border-color: #4d4d4d;    
+}
+.checkbox:checked + .check::before{
+    border-color: #333;
+}
+.checkbox:checked + .check::after{
+    -moz-animation: check 0.8s ease 0s running;
+    -webkit-animation: check 0.8s ease 0s running;
+    animation: check 0.8s ease 0s running;
+    display: block;
+    width: 7px;
+    height: 20px;
+    border-color: #333;
+}
+@-webkit-keyframes check{
+    0%{ height: 0; width: 0; }
+    25%{ height: 0; width: 7px; }
+    50%{ height: 20px; width: 7px; }
+}
+
+.btn{
+    padding-bottom: 20px;
+    height: 45px;
+}
+.btn{
+    height: 80%;
+    width: 20%;
+    padding: 10px 0 10px 0;
+    margin-top: 10px;
+    outline: none;
+    color: #666;
+    border: 1px solid #333;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn:hover{
+    color: #fff;
+    background-color: #333;
+}
+
+
+
+@media (min-width: 334px){
+    .container .title{
+        font-size: 30px;
+    }
+    .container .title::before{
+        content: '';
+        position: absolute;
+        top: 30px;
+        height: 2px;
+        width: 80px;
+        background: #666;
+    }
+    h3{
+        font-size: 18px;
+    }
+    .user-details .input-box input{
+        padding-left: 10px;
+        height: 35px;
+    }
+    .gender-category label{
+        padding: 3px;
+        font-size: 18px;
+    }
+    .button{
+        width: 400px;
+        margin-left: 70px;
+    }
+}
